@@ -1,0 +1,31 @@
+
+
+@mixin btn-sistema($color,$color_hover) {
+    background-color: rgba($color, 1);    
+    color: $color_blanco;
+    border-color: $color;
+    transition: all 0.2s;
+    &:hover {
+        background-color: rgba($color_hover, 1);
+        border-color: $color_hover;
+    }
+}
+button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 26px;
+    margin: 5px;
+    padding: 1% 3%;
+    text-transform: capitalize;
+    @include btn-sistema($color_1,$color_2);
+}
+
+
+// .btn-sistema-eliminar {
+//     @include btn-sistema($color_2);
+// }
+
+// .btn-sistema-editar {
+//     @include btn-sistema($color_3);
+// }

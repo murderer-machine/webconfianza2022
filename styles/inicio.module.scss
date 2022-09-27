@@ -1,0 +1,116 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+@import './variables.scss';
+
+
+
+%slideContainer {
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bg-kenburns-effect 5s infinite;
+    background-position: center center;
+}
+
+%slideTamano {
+    @include media-breakpoint-only(xs) {
+        height: auto;
+    }
+
+    @include media-breakpoint-only(sm) {
+        height: auto;
+    }
+
+    @include media-breakpoint-only(md) {
+        height: 100vh;
+    }
+
+    @include media-breakpoint-only(lg) {
+        height: 100vh;
+    }
+
+    @include media-breakpoint-only(xl) {
+        height: 100vh;
+    }
+
+    @include media-breakpoint-only(xxl) {
+        height: 100vh;
+    }
+}
+
+@keyframes bg-kenburns-effect {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background-size: 110% 110%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+        ;
+    }
+}
+
+
+.containerInicio {
+    background-image: url('../public/fondo_diseno_nuevo.png');
+    @extend %slideContainer;
+    @extend %slideTamano;
+
+    @include media-breakpoint-only(xs) {
+        background-image: initial;
+    }
+
+    @include media-breakpoint-only(sm) {
+        background-image: initial;
+    }
+}
+
+
+
+.rowInicio {
+    @extend %slideTamano;
+}
+
+.persona {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    background: url('./../public/personaprincipal.png');
+
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-only(md) {
+        background-size: 80%;
+        background-position: 20px bottom;
+    }
+
+    @include media-breakpoint-only(lg) {
+        background-size: 80%;
+        background-position: 20px bottom;
+    }
+
+    @include media-breakpoint-only(xl) {
+        background-size: 60%;
+        background-position: 110px bottom;
+    }
+
+    @include media-breakpoint-only(xxl) {
+        background-size: 60%;
+        background-position: 110px bottom;
+    }
+}
+
+.rowNosotros {
+    background: #fff;
+    border-radius: 20px;
+
+    & p:nth-of-type(2) {
+        font-style: italic;
+        font-weight: bold;
+
+    }
+}
